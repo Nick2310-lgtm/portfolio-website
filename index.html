@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home | Nick Portfolio</title>
+    <title>Nick Portfolio | Home</title>
     <style>
-        body { font-family: Arial, sans-serif; margin:0; background-color:#f5f5f5; color:#333; }
-        header { background-color:#4CAF50; padding:20px; color:white; text-align:center; }
-        nav a { margin: 0 15px; text-decoration:none; color:white; font-weight:bold; }
-        nav a:hover { text-decoration:underline; }
-        main { padding:40px; max-width:900px; margin:auto; }
-        h1 { color:#4CAF50; }
-        footer { background-color:#333; color:white; text-align:center; padding:10px; margin-top:40px; }
-        #env { font-weight:bold; color:#555; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; background:#f9f9f9; color:#333; }
+        header { background:#2c3e50; padding:20px 0; color:white; text-align:center; position: sticky; top:0; z-index:100; }
+        nav { margin-top:10px; }
+        nav a { margin: 0 20px; text-decoration:none; color:white; font-weight:bold; font-size:16px; }
+        nav a:hover { text-decoration: underline; }
+        main { max-width:1000px; margin:auto; padding:40px 20px; }
+        h1 { color:#2c3e50; font-size:36px; }
+        h2 { color:#2980b9; }
+        .intro { background:white; padding:20px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+        footer { background:#2c3e50; color:white; text-align:center; padding:15px; margin-top:40px; }
+        .env { font-weight:bold; color:#555; margin-top:10px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Nick's Portfolio</h1>
+    <h1>Welcome to My Portfolio</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
@@ -27,23 +30,22 @@
 </header>
 
 <main>
-    <h2>Welcome!</h2>
-    <p>
-        I am a 3rd Year B.Tech student pursuing <strong>Artificial Intelligence and Data Science</strong>. 
-        I have hands-on experience in <strong>Machine Learning</strong> and <strong>NLP</strong>, 
-        and I am passionate about applying my skills to solve real-world problems.
-    </p>
+    <div class="intro">
+        <p>I am a 3rd Year B.Tech student pursuing <strong>Artificial Intelligence and Data Science</strong>. 
+        I have hands-on experience in <strong>Machine Learning</strong> and <strong>Natural Language Processing</strong>, 
+        and I am passionate about solving real-world problems using AI.</p>
 
-    <p><strong>Site Owner:</strong> <span id="env"></span></p>
+        <p class="env">Environment Variable (Site Owner): <span id="owner"></span></p>
 
-    <script>
-        const SITE_OWNER = "Nick – B.Tech AI & Data Science Student";
-        document.getElementById("env").innerText = SITE_OWNER;
-    </script>
+        <script>
+            const SITE_OWNER = "B.Tech AI & Data Science Student";
+            document.getElementById("owner").innerText = SITE_OWNER;
+        </script>
+    </div>
 </main>
 
 <footer>
-    &copy; 2026 Nick Portfolio. All Rights Reserved.
+    &copy; 2026 Nick Portfolio. All rights reserved.
 </footer>
 
 </body>
