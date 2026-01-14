@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Projects | Nick Portfolio</title>
+    <title>Nick Portfolio | Projects</title>
     <style>
-        body { font-family: Arial, sans-serif; margin:0; background-color:#f0f8ff; color:#333; }
-        header { background-color:#1E90FF; padding:20px; color:white; text-align:center; }
-        nav a { margin: 0 15px; text-decoration:none; color:white; font-weight:bold; }
-        nav a:hover { text-decoration:underline; }
-        main { padding:40px; max-width:900px; margin:auto; }
-        h2 { color:#1E90FF; }
-        .project { background-color:white; padding:20px; margin-bottom:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
-        a { color:#1E90FF; text-decoration:none; }
-        a:hover { text-decoration:underline; }
-        footer { background-color:#333; color:white; text-align:center; padding:10px; margin-top:40px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; background:#ecf0f1; color:#333; }
+        header { background:#2980b9; padding:20px 0; color:white; text-align:center; position: sticky; top:0; z-index:100; }
+        nav a { margin: 0 20px; text-decoration:none; color:white; font-weight:bold; font-size:16px; }
+        nav a:hover { text-decoration: underline; }
+        main { max-width:1000px; margin:auto; padding:40px 20px; display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:20px; }
+        .project-card { background:white; padding:20px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); transition: transform 0.2s; }
+        .project-card:hover { transform: translateY(-5px); }
+        .project-card h2 { color:#2980b9; margin-top:0; }
+        .project-card p { margin:10px 0; }
+        .project-card a { text-decoration:none; color:#2980b9; font-weight:bold; }
+        footer { background:#2980b9; color:white; text-align:center; padding:15px; margin-top:40px; }
     </style>
 </head>
 <body>
@@ -29,21 +30,21 @@
 </header>
 
 <main>
-    <div class="project">
+    <div class="project-card">
         <h2>Text Summarization</h2>
-        <p>Machine Learning project that summarizes large text documents using NLP techniques.</p>
+        <p>A machine learning project for summarizing large text documents using NLP techniques.</p>
         <a href="https://github.com/Nick2310-lgtm/Text-Summarization" target="_blank">View on GitHub</a>
     </div>
 
-    <div class="project">
+    <div class="project-card">
         <h2>User Question Answering</h2>
-        <p>AI system that answers user questions using Natural Language Processing.</p>
+        <p>An AI-based system that answers user questions using natural language processing.</p>
         <a href="https://github.com/Nick2310-lgtm/User-Question-Answering" target="_blank">View on GitHub</a>
     </div>
 </main>
 
 <footer>
-    &copy; 2026 Nick Portfolio. All Rights Reserved.
+    &copy; 2026 Nick Portfolio. All rights reserved.
 </footer>
 
 </body>
