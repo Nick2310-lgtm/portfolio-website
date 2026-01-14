@@ -3,17 +3,17 @@
 <head>
     <title>Nick Portfolio | Home</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; background:#f9f9f9; color:#333; }
-        header { background:#2c3e50; padding:20px 0; color:white; text-align:center; position: sticky; top:0; z-index:100; }
-        nav { margin-top:10px; }
-        nav a { margin: 0 20px; text-decoration:none; color:white; font-weight:bold; font-size:16px; }
-        nav a:hover { text-decoration: underline; }
-        main { max-width:1000px; margin:auto; padding:40px 20px; }
-        h1 { color:#2c3e50; font-size:36px; }
-        h2 { color:#2980b9; }
-        .intro { background:white; padding:20px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
-        footer { background:#2c3e50; color:white; text-align:center; padding:15px; margin-top:40px; }
-        .env { font-weight:bold; color:#555; margin-top:10px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; background:#f0f2f5; color:#333; }
+        header { background:#34495e; color:white; padding:20px 0; text-align:center; position:sticky; top:0; z-index:100; }
+        nav a { margin:0 20px; text-decoration:none; color:white; font-weight:bold; font-size:16px; }
+        nav a:hover { text-decoration:underline; }
+        main { max-width:1000px; margin:auto; padding:50px 20px; }
+        .intro { background:white; padding:30px 20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; }
+        .intro h1 { font-size:42px; color:#34495e; margin-bottom:20px; }
+        .intro p { font-size:18px; line-height:1.6; }
+        .env-box { margin-top:25px; padding:15px; border:2px dashed #2980b9; display:inline-block; border-radius:8px; background:#eaf2f8; font-weight:bold; color:#2980b9; }
+        footer { background:#34495e; color:white; text-align:center; padding:15px; margin-top:40px; }
+        @media(max-width:600px){ .intro h1{ font-size:32px; } nav a{ display:block; margin:10px 0; } }
     </style>
 </head>
 <body>
@@ -31,17 +31,16 @@
 
 <main>
     <div class="intro">
-        <p>I am a 3rd Year B.Tech student pursuing <strong>Artificial Intelligence and Data Science</strong>. 
-        I have hands-on experience in <strong>Machine Learning</strong> and <strong>Natural Language Processing</strong>, 
-        and I am passionate about solving real-world problems using AI.</p>
-
-        <p class="env">Environment Variable (Site Owner): <span id="owner"></span></p>
-
-        <script>
-            const SITE_OWNER = "B.Tech AI & Data Science Student";
-            document.getElementById("owner").innerText = SITE_OWNER;
-        </script>
+        <h1>Hello, I'm Nick!</h1>
+        <p>I am a 3rd Year B.Tech student pursuing <strong>Artificial Intelligence and Data Science</strong>. I have hands-on experience in <strong>Machine Learning</strong> and <strong>Natural Language Processing</strong>, and I am passionate about solving real-world problems using AI.</p>
+        <div class="env-box">
+            Environment Variable (Site Owner): <span id="owner"></span>
+        </div>
     </div>
+    <script>
+        const SITE_OWNER = "B.Tech AI & Data Science Student";
+        document.getElementById("owner").innerText = SITE_OWNER;
+    </script>
 </main>
 
 <footer>
