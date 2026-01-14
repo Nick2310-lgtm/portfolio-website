@@ -1,30 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cart | Portfolio Website</title>
+    <title>Cart | Nick Portfolio</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin:0; background-color:#fffaf0; color:#333; }
+        header { background-color:#FF8C00; padding:20px; color:white; text-align:center; }
+        nav a { margin: 0 15px; text-decoration:none; color:white; font-weight:bold; }
+        nav a:hover { text-decoration:underline; }
+        main { padding:40px; max-width:700px; margin:auto; }
+        table { width:100%; border-collapse: collapse; margin-top:20px; }
+        th, td { border:1px solid #ddd; padding:12px; text-align:left; }
+        th { background-color:#FF8C00; color:white; }
+        footer { background-color:#333; color:white; text-align:center; padding:10px; margin-top:40px; }
+    </style>
 </head>
 <body>
 
-<h1>Cart Page</h1>
+<header>
+    <h1>Cart</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="cart.html">Cart</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="projects.html">Projects</a> |
-    <a href="skills.html">Skills</a> |
-    <a href="cart.html">Cart</a> |
-    <a href="contact.html">Contact</a>
-</nav>
+<main>
+    <p>Items in your cart:</p>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>AI Course</td>
+            <td>₹999</td>
+        </tr>
+        <tr>
+            <td>Machine Learning Notes</td>
+            <td>₹499</td>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <th>₹1498</th>
+        </tr>
+    </table>
+</main>
 
-<hr>
-
-<p>Items in your cart:</p>
-
-<ul>
-    <li>AI Course – ₹999</li>
-    <li>Machine Learning Notes – ₹499</li>
-</ul>
-
-<p><strong>Total Amount: ₹1498</strong></p>
+<footer>
+    &copy; 2026 Nick Portfolio. All Rights Reserved.
+</footer>
 
 </body>
 </html>
