@@ -7,15 +7,11 @@
         header { background:#16a085; padding:20px 0; color:white; text-align:center; position:sticky; top:0; }
         nav a { margin:0 20px; text-decoration:none; color:white; font-weight:bold; }
         main { max-width:800px; margin:auto; padding:40px 20px; }
-        .item { background:white; padding:15px; border-radius:8px;
-                box-shadow:0 2px 10px rgba(0,0,0,0.1); cursor:pointer; margin-bottom:15px; }
-        table { width:100%; border-collapse: collapse; background:white; border-radius:8px;
-                box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+        .item { background:white; padding:15px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); cursor:pointer; margin-bottom:15px; }
+        table { width:100%; border-collapse: collapse; background:white; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
         th, td { padding:12px; border-bottom:1px solid #ddd; }
         th { background:#16a085; color:white; }
-        .pay-btn { margin-top:20px; padding:15px; width:100%;
-                   background:#27ae60; color:white; border:none;
-                   font-size:18px; border-radius:6px; cursor:pointer; }
+        .pay-btn { margin-top:20px; padding:15px; width:100%; background:#27ae60; color:white; border:none; font-size:18px; border-radius:6px; cursor:pointer; }
         footer { background:#16a085; color:white; text-align:center; padding:15px; margin-top:40px; }
     </style>
 </head>
@@ -54,21 +50,15 @@
 
 <script>
 let total = 0;
-
 function addToCart(name, price) {
     const tbody = document.getElementById("cart-body");
     tbody.innerHTML += `<tr><td>${name}</td><td>${price}</td></tr>`;
     total += price;
     document.getElementById("total").innerText = total;
 }
-
 function payNow() {
-    if (total === 0) {
-        alert("Your cart is empty!");
-    } else {
-        alert("Payment successful! Amount paid: ₹" + total);
-        location.reload();
-    }
+    if (total === 0) { alert("Your cart is empty!"); } 
+    else { alert("Payment successful! Amount paid: ₹" + total); location.reload(); }
 }
 </script>
 
