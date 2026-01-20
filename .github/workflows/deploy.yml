@@ -15,12 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Inject environment variable
+      - name: Log deployment info internally
         run: |
-          sed -i "s/__SITE_OWNER__/${{ vars.SITE_OWNER }}/g" index.html
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
+          echo "Deploying portfolio..."
+          echo "Site owner: ${{ vars.SITE_OWNER }}"
+          echo "Build timestamp: $(date)"
 
       - uses: actions/deploy-pages@v4
