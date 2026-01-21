@@ -2,17 +2,27 @@
 <html>
 <head>
     <title>Nick Portfolio | Cart</title>
+
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0P5MW86DQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-E0P5MW86DQ');
+    </script>
+
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; background:#f0f0f0; color:#333; }
-        header { background:#16a085; padding:20px 0; color:white; text-align:center; position:sticky; top:0; }
+        body { font-family:'Segoe UI',sans-serif; background:#f0f0f0; margin:0; }
+        header { background:#16a085; color:white; text-align:center; padding:20px; }
         nav a { margin:0 20px; text-decoration:none; color:white; font-weight:bold; }
-        main { max-width:800px; margin:auto; padding:40px 20px; }
-        .item { background:white; padding:15px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); cursor:pointer; margin-bottom:15px; }
-        table { width:100%; border-collapse: collapse; background:white; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
-        th, td { padding:12px; border-bottom:1px solid #ddd; }
+        main { max-width:800px; margin:auto; padding:40px; }
+        .item { background:white; padding:15px; margin-bottom:10px; border-radius:8px; cursor:pointer; }
+        table { width:100%; background:white; border-collapse:collapse; margin-top:20px; }
+        th,td { padding:12px; border-bottom:1px solid #ddd; }
         th { background:#16a085; color:white; }
-        .pay-btn { margin-top:20px; padding:15px; width:100%; background:#27ae60; color:white; border:none; font-size:18px; border-radius:6px; cursor:pointer; }
-        footer { background:#16a085; color:white; text-align:center; padding:15px; margin-top:40px; }
+        button { width:100%; margin-top:20px; padding:15px; background:#27ae60; color:white; border:none; font-size:18px; }
+        footer { background:#16a085; color:white; text-align:center; padding:15px; }
     </style>
 </head>
 <body>
@@ -29,41 +39,34 @@
 </header>
 
 <main>
-    <h2>Click on an item to add to your cart</h2>
-
-    <div class="item" onclick="addToCart('AI Course', 999)">AI Course – ₹999</div>
-    <div class="item" onclick="addToCart('Machine Learning Notes', 499)">Machine Learning Notes – ₹499</div>
-    <div class="item" onclick="addToCart('NLP Tutorial', 799)">NLP Tutorial – ₹799</div>
+    <div class="item" onclick="addToCart('AI Course',999)">AI Course – ₹999</div>
+    <div class="item" onclick="addToCart('ML Notes',499)">ML Notes – ₹499</div>
+    <div class="item" onclick="addToCart('NLP Tutorial',799)">NLP Tutorial – ₹799</div>
 
     <table>
-        <thead>
-            <tr><th>Item</th><th>Price (₹)</th></tr>
-        </thead>
-        <tbody id="cart-body"></tbody>
-        <tfoot>
-            <tr><th>Total</th><th id="total">0</th></tr>
-        </tfoot>
+        <thead><tr><th>Item</th><th>Price</th></tr></thead>
+        <tbody id="cart"></tbody>
+        <tfoot><tr><th>Total</th><th id="total">0</th></tr></tfoot>
     </table>
 
-    <button class="pay-btn" onclick="payNow()">Pay Now</button>
+    <button onclick="pay()">Pay Now</button>
 </main>
 
 <script>
 let total = 0;
-function addToCart(name, price) {
-    const tbody = document.getElementById("cart-body");
-    tbody.innerHTML += `<tr><td>${name}</td><td>${price}</td></tr>`;
+function addToCart(item, price) {
+    document.getElementById("cart").innerHTML += `<tr><td>${item}</td><td>${price}</td></tr>`;
     total += price;
     document.getElementById("total").innerText = total;
 }
-function payNow() {
-    if (total === 0) { alert("Your cart is empty!"); } 
-    else { alert("Payment successful! Amount paid: ₹" + total); location.reload(); }
+function pay() {
+    if(total===0) alert("Cart is empty!");
+    else { alert("Payment successful ₹"+total); location.reload(); }
 }
 </script>
 
 <footer>
-    &copy; 2026 Nick Portfolio. All rights reserved.
+    &copy; 2026 Nick Portfolio
 </footer>
 
 </body>
